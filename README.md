@@ -4,6 +4,8 @@ Here is an example of an simple web application which has a in-memory cache such
 
 We want the web-servers to be co-located with the cache as much as possible.
 
+![alt text](https://i.ibb.co/q0SgPLk/pod-drawio.png)
+
 Here is the yaml snippet of a simple redis deployment with four replicas and selector label app=redis-app. The deployment has PodAntiAffinity configured to ensure the scheduler does not co-locate replicas on a single node.
 
 ~~~
