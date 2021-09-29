@@ -1,8 +1,10 @@
 # Kubernetes Ipstack Redis App
 
-Here is an example of an simple web application which has a in-memory cache such as redis Redis deployment with 4 replicas and selector label app=redis-app in a three node kubernetes cluster. 
+Here is an example of an simple web application which has a in-memory cache such as redis Redis deployment with 4 replicas in a three node kubernetes cluster that uses pod affinity. 
 
 We want the web-servers to be co-located with the cache as much as possible.
+
+If we create the below two deployments, our three node cluster should look like this.
 
 ![alt text](https://i.ibb.co/q0SgPLk/pod-drawio.png)
 
