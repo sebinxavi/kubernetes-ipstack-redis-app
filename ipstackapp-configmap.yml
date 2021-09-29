@@ -1,0 +1,8 @@
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: ipstackapp
+data:
+  CACHING_SERVER: redis-service
+  IPSTACK_KEY: c8fee05d5f93e4daf26abcfb4f9d0b89

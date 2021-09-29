@@ -1,0 +1,49 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ipstackapp
+  labels:
+    app: ipstackapp
+spec:
+    
+  replicas: 6
+  selector:
+    matchLabels:
+      app: ipstackapp
+
+  template:
+    metadata:
+      labels:
+        app: ipstackapp
+
+    spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                  - ipstackapp
+            topologyKey: "kubernetes.io/hostname"
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                  - redis-app
+            topologyKey: "kubernetes.io/hostname"
+
+      containers:
+      
+        - name: ipstackapp
+          image: fujikomalan/ipstack:latest
+          ports:
+            - containerPort: 8080
+          envFrom:
+            - configMapRef:
+                name: ipstackapp
