@@ -49,7 +49,7 @@ spec:
 ~~~
 
 
-The below yaml snippet of the webserver deployment has podAntiAffinity and podAffinity configured. This informs the scheduler that all its replicas are to be co-located with pods that have selector label app=ipstack. This will also ensure that each web-server replica does not co-locate on a single node.
+The below yaml snippet of the webserver deployment has podAntiAffinity and podAffinity configured. This informs the scheduler that all its replicas are to be co-located with pods that have selector label app=redis-app. This will also ensure that each web-server replica does not co-locate on a single node.
 
 
 ~~~
