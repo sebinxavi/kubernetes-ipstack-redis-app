@@ -107,7 +107,9 @@ spec:
             - configMapRef:
                 name: ipstackapp
 ~~~
+## Result
 
+![alt text](https://i.ibb.co/NKv6b17/result.png)
 
 ## Author
 Created by [@sebinxavi](https://www.linkedin.com/in/sebinxavi/) - feel free to contact me and advise as necessary!
