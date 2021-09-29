@@ -41,7 +41,7 @@ spec:
       containers:
       
         - name: ipstackapp
-          image: fujikomalan/ipstack:latest
+          image: sebinxavi/ipstack:latest
           ports:
             - containerPort: 8080
           envFrom:
