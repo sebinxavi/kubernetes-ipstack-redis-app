@@ -107,7 +107,11 @@ spec:
             - configMapRef:
                 name: ipstackapp
 ~~~
-## Result
+## Results
+
+![alt text](https://i.ibb.co/HKP02y4/result-2.png)
+
+![alt text](https://i.ibb.co/bQp86TP/result-1.png)
 
 ![alt text](https://i.ibb.co/NKv6b17/result.png)
 
